@@ -2,9 +2,9 @@ import type { Dictionary } from "./fr";
 
 const en: Dictionary = {
   meta: {
-    title: "Dr ENNAQI KHADIJA – Obstetrician-Gynaecologist in Casablanca",
+    title: "Dr ENNAQUI KHADIJA – Obstetrician-Gynaecologist in Casablanca",
     description:
-      "Obstetrics and gynaecology practice of Dr Khadija Ennaqi in Casablanca (Hay Al Qods, Bernoussi): gynaecological consultations, pregnancy follow-up, ultrasound and women’s health. Book online.",
+      "Obstetrics and gynaecology practice of Dr Khadija Ennaqui in Casablanca (Hay Al Qods, Bernoussi): gynaecological consultations, pregnancy follow-up, ultrasound and women’s health. Book online.",
   },
   nav: {
     tagline: "Obstetrician-Gynaecologist",
@@ -23,18 +23,18 @@ const en: Dictionary = {
   },
   hero: {
     eyebrow: "Obstetrician-Gynaecologist · Casablanca",
-    title: "Dr Khadija Ennaqi",
+    title: "Dr Khadija Ennaqui",
     subtitle: "Attentive listening and caring support, at every stage of a woman’s life.",
     ctaVisit: "Visit the practice",
     ctaBook: "Book an appointment",
     badges: ["Gynaecology", "Obstetrics", "Pregnancy follow-up"],
-    portraitAlt: "Portrait of Dr Khadija Ennaqi",
+    portraitAlt: "Portrait of Dr Khadija Ennaqui",
   },
   about: {
     kicker: "The doctor",
     title: "A gynaecologist who listens to women",
     paragraphs: [
-      "Dr Khadija Ennaqi is an obstetrician-gynaecologist in Casablanca. She supports women at every stage of life, from their first gynaecological visit to pregnancy follow-up.",
+      "Dr Khadija Ennaqui is an obstetrician-gynaecologist in Casablanca. She supports women at every stage of life, from their first gynaecological visit to pregnancy follow-up.",
       "Attentive and approachable, she takes the time to listen, explain clearly and offer follow-up suited to each patient, in a calm and reassuring practice.",
     ],
     credentials: [
@@ -55,7 +55,7 @@ const en: Dictionary = {
       {
         title: "Gynaecological consultation",
         summary: "Examination, screening and advice for your everyday health.",
-        body: "Dr Ennaqi sees you for any gynaecological concern, with attentive listening and clear explanations.",
+        body: "Dr Ennaqui sees you for any gynaecological concern, with attentive listening and clear explanations.",
         points: ["Gynaecological examination", "Screening and prevention", "Personalised advice"],
       },
       {
@@ -86,7 +86,7 @@ const en: Dictionary = {
     next: "Next photo",
     goTo: "Go to photo",
     captions: {
-      doctor: "Dr Khadija Ennaqi",
+      doctor: "Dr Khadija Ennaqui",
       building: "The practice",
       reception: "Reception",
       waiting: "Waiting room",

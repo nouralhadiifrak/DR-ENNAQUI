@@ -19,7 +19,7 @@ export function Logo({ tagline, className = "" }: LogoProps) {
         {/* Two short lines on phones to leave room for the header controls. */}
         <span className="font-display text-[0.95rem] font-semibold leading-[1.05] tracking-wide sm:text-[1.15rem] sm:leading-none" dir="ltr">
           <span className="block sm:inline">Dr Khadija </span>
-          <span className="block sm:inline">Ennaqi</span>
+          <span className="block sm:inline">Ennaqui</span>
         </span>
         <span className="mt-1 hidden text-[0.62rem] font-medium uppercase tracking-[0.22em] opacity-70 sm:block">
           {tagline}
