@@ -26,6 +26,7 @@ function JsonLd({ lang, name }: { lang: Locale; name: string }) {
     telephone: site.phones.office.tel,
     url: `${site.url}/${lang}`,
     image: `${site.url}${gallery[0].src}`,
+    logo: `${site.url}/images/logo.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,

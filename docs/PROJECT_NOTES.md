@@ -28,7 +28,11 @@ items. No secrets belong in this file.
 - 4 qualifications and 4 services, as the owner confirmed.
 - Qualifications use neutral, non-credential items (specialty, pregnancy
   follow-up, emergency number, location). No diplomas are invented.
-- Gallery and portrait use SVG placeholders; the logo is a placeholder "KE" monogram.
+- Gallery and portrait use SVG placeholders.
+- Logo: the client's line drawing (expecting mother), sent in chat. It's
+  converted to a transparent mask (`public/logo-mark.png`) drawn in
+  currentColor so it follows the theme. Also exported as `public/images/logo.png`
+  (JSON-LD) and `src/app/icon.png` / `apple-icon.png` (favicons).
 - Floating WhatsApp + Instagram buttons sit on the end side, above the
   sticky Call / Book bar on phones. Instagram also appears in Contact and Footer.
 - Contact hours are grouped as "Lundi – Vendredi / Samedi / Dimanche". Saturday
@@ -41,7 +45,7 @@ items. No secrets belong in this file.
 - [ ] Real list of services and their details (the 4 services are placeholders).
 - [ ] Photos: portrait, building, reception, waiting rooms, offices, exam rooms
       (≥1600px wide; portrait ≥800×1000).
-- [ ] Logo file (SVG or transparent PNG).
+- [ ] Optional: the logo as a vector file (SVG) for print and very large sizes.
 - [ ] Native-speaker check of the Arabic translation and of the Arabic name.
 - [ ] Confirm the spelling of the district (Hay Al Qods, Bernoussi).
 - [ ] Hours: the owner answered "no" to "is Saturday 08:30–18:00 like weekdays,

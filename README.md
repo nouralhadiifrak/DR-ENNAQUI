@@ -25,7 +25,7 @@ Without Google credentials, `npm run dev` runs booking in **demo mode**: the for
 | Phones, emergency number, address, map, WhatsApp, Instagram, photos | `src/lib/site.ts` |
 | Opening hours, 20-min slots, booking window | `src/lib/schedule.ts` |
 | Colours and fonts | `src/app/globals.css`, `src/app/[lang]/layout.tsx` |
-| Logo (placeholder monogram) | `src/components/Logo.tsx`, `src/app/icon.svg` |
+| Logo | `public/logo-mark.png` (mask), `public/images/logo.png`, `src/app/icon.png`, `src/app/apple-icon.png` |
 
 **Photos:** the files in `public/images/` are placeholders. Put the real photos there with URL-safe names (lowercase, dashes, no accents, e.g. `doctor-portrait.jpg`, `building.jpg`, `reception.jpg`, `waiting-room.jpg`, `office.jpg`, `exam-room.jpg`). Then update the `gallery` list in `src/lib/site.ts`. Keep the portrait first: it's also the hero photo. Add `fit: "contain"` to tall photos so they show in full over a blurred copy of themselves. Add a caption for each new key in all three dictionaries (`gallery.captions`).
 
