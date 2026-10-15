@@ -1,7 +1,7 @@
 // Practice details shown across the site. Edit here to update every page.
 
 export const site = {
-  name: "Dr Khadija Ennaqi",
+  name: "Dr Khadija Ennaqui",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   phones: {
     office: { display: "05 22 75 82 82", tel: "+212522758282" },

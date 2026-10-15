@@ -1,6 +1,6 @@
-# Dr Khadija Ennaqi – Website
+# Dr Khadija Ennaqui – Website
 
-One-page site for Dr ENNAQI Khadija, gynécologue-obstétricienne in Casablanca. It's in French (default), English and Arabic (RTL), with light/dark mode, WhatsApp and Instagram buttons, and online booking through Google Calendar.
+One-page site for Dr ENNAQUI Khadija, gynécologue-obstétricienne in Casablanca. It's in French (default), English and Arabic (RTL), with light/dark mode, WhatsApp and Instagram buttons, and online booking through Google Calendar.
 
 Built with Next.js 16 (App Router, TypeScript), Tailwind CSS 4 and framer-motion.
 
@@ -33,7 +33,7 @@ Without Google credentials, `npm run dev` runs booking in **demo mode**: the for
 
 Appointments are written by a Google **service account** into the doctor's calendar. Slots that overlap a busy event in that calendar show as unavailable. Each booking is re-checked just before it's saved.
 
-1. Go to <https://console.cloud.google.com/>, create a project (e.g. "dr-ennaqi-booking") and enable the **Google Calendar API** (*APIs & Services → Library*).
+1. Go to <https://console.cloud.google.com/>, create a project (e.g. "dr-ennaqui-booking") and enable the **Google Calendar API** (*APIs & Services → Library*).
 2. *IAM & Admin → Service Accounts → Create service account*. A name is enough; no roles are needed.
 3. Open the service account → *Keys → Add key → Create new key → JSON*. Download the file and keep it private.
 4. In **Google Calendar** (signed in with the account that should receive the bookings):

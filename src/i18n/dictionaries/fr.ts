@@ -4,9 +4,9 @@
 
 const fr = {
   meta: {
-    title: "Dr ENNAQI KHADIJA – Gynécologue-obstétricienne à Casablanca",
+    title: "Dr ENNAQUI KHADIJA – Gynécologue-obstétricienne à Casablanca",
     description:
-      "Cabinet de gynécologie-obstétrique du Dr Khadija Ennaqi à Casablanca (Hay Al Qods, Bernoussi) : consultations gynécologiques, suivi de grossesse, échographie et santé de la femme. Prise de rendez-vous en ligne.",
+      "Cabinet de gynécologie-obstétrique du Dr Khadija Ennaqui à Casablanca (Hay Al Qods, Bernoussi) : consultations gynécologiques, suivi de grossesse, échographie et santé de la femme. Prise de rendez-vous en ligne.",
   },
   nav: {
     tagline: "Gynécologue-obstétricienne",
@@ -25,18 +25,18 @@ const fr = {
   },
   hero: {
     eyebrow: "Gynécologue-obstétricienne · Casablanca",
-    title: "Dr Khadija Ennaqi",
+    title: "Dr Khadija Ennaqui",
     subtitle: "Une écoute attentive et des soins bienveillants, à chaque étape de votre vie de femme.",
     ctaVisit: "Visiter le cabinet",
     ctaBook: "Prendre rendez-vous",
     badges: ["Gynécologie", "Obstétrique", "Suivi de grossesse"],
-    portraitAlt: "Portrait du Dr Khadija Ennaqi",
+    portraitAlt: "Portrait du Dr Khadija Ennaqui",
   },
   about: {
     kicker: "La docteure",
     title: "Une gynécologue à l’écoute des femmes",
     paragraphs: [
-      "Le Dr Khadija Ennaqi est gynécologue-obstétricienne à Casablanca. Elle accompagne les femmes à chaque étape de leur vie, de la première consultation gynécologique au suivi de grossesse.",
+      "Le Dr Khadija Ennaqui est gynécologue-obstétricienne à Casablanca. Elle accompagne les femmes à chaque étape de leur vie, de la première consultation gynécologique au suivi de grossesse.",
       "Attentive et disponible, elle prend le temps d’écouter, d’expliquer clairement et de proposer un suivi adapté à chaque patiente, dans un cabinet calme et rassurant.",
     ],
     credentials: [
@@ -57,7 +57,7 @@ const fr = {
       {
         title: "Consultation gynécologique",
         summary: "Examen, dépistage et conseils pour votre santé au quotidien.",
-        body: "Le Dr Ennaqi vous reçoit pour tout motif gynécologique, avec une écoute attentive et des explications claires.",
+        body: "Le Dr Ennaqui vous reçoit pour tout motif gynécologique, avec une écoute attentive et des explications claires.",
         points: ["Examen gynécologique", "Dépistage et prévention", "Conseils personnalisés"],
       },
       {
@@ -88,7 +88,7 @@ const fr = {
     next: "Photo suivante",
     goTo: "Aller à la photo",
     captions: {
-      doctor: "Dr Khadija Ennaqi",
+      doctor: "Dr Khadija Ennaqui",
       building: "Le cabinet",
       reception: "L’accueil",
       waiting: "La salle d’attente",

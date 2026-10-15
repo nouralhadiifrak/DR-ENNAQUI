@@ -1,13 +1,13 @@
-# Project notes – Dr Khadija Ennaqi website
+# Project notes – Dr Khadija Ennaqui website
 
 Read this first when resuming work. It records decisions, status and open
 items. No secrets belong in this file.
 
 ## Client
 
-- Dr ENNAQI Khadija, gynécologue-obstétricienne (female: every text uses feminine forms).
-  - Spelling confirmed by the owner: **ENNAQI**. The Instagram handle is
-    `@dr_ennaqui_khadija` (with a "u"), so it's kept as-is.
+- Dr ENNAQUI Khadija, gynécologue-obstétricienne (female: every text uses feminine forms).
+  - Spelling confirmed by the owner: **ENNAQUI** (changed from "Ennaqi" in
+    round 2). It matches the Instagram handle `@dr_ennaqui_khadija`.
   - Arabic name: الدكتورة الناقي خديجة (as provided; needs a native-speaker check).
 - Address: 71 Bd Mokhtar Ben Ahmed Al Guerraoui, Hay Al Qods, Bernoussi, Casablanca
   (the client wrote "hay lqods barnoussi"; the spelling needs confirming).
