@@ -1,0 +1,322 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Brand palette: #FF9D9D · #FFC5AA · #EEF8CD · #BBF1D2, anchored by a deep plum
+   for text and primary buttons so contrast stays readable. */
+:root {
+  --rose: #ff9d9d;
+  --peach: #ffc5aa;
+  --lime: #eef8cd;
+  --mint: #bbf1d2;
+  --plum: #3b2530;
+  --plum-deep: #23161c;
+  --blush: #fff5f0;
+
+  --bg: #fffaf6;
+  --surface: #ffffff;
+  --surface-2: #fdf0e9;
+  --ink: #3b2530;
+  --muted: #6c5560;
+  --line: rgb(59 37 48 / 0.1);
+  --brand: #7a3b4a;
+  --brand-ink: #fff5f0;
+  --accent: #b44f5c;
+  --gold: #a65a48;
+  --ring: rgb(180 79 92 / 0.35);
+  --sans: var(--font-inter), var(--font-plex-arabic), ui-sans-serif, system-ui, sans-serif;
+  --serif: var(--font-cormorant), var(--font-amiri), Georgia, serif;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #1c1418;
+  --surface: #271c21;
+  --surface-2: #21171c;
+  --ink: #fbeee8;
+  --muted: #cdb7bd;
+  --line: rgb(251 238 232 / 0.12);
+  --brand: #ff9d9d;
+  --brand-ink: #2a1a20;
+  --accent: #ffb0ab;
+  --gold: #ffc5aa;
+  --ring: rgb(255 157 157 / 0.45);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-accent: var(--accent);
+  --color-gold: var(--gold);
+  --color-rose: var(--rose);
+  --color-peach: var(--peach);
+  --color-lime: var(--lime);
+  --color-mint: var(--mint);
+  --color-plum: var(--plum);
+  --color-plum-deep: var(--plum-deep);
+  --color-blush: var(--blush);
+
+  --font-sans: var(--sans);
+  --font-display: var(--serif);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  overflow-x: clip;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Arabic: Plex Arabic for text, Amiri for headings. */
+html[lang="ar"] {
+  --sans: var(--font-plex-arabic), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --serif: var(--font-amiri), var(--font-cormorant), Georgia, serif;
+}
+html[lang="ar"] .tracking-kicker,
+html[lang="ar"] .tracking-title {
+  letter-spacing: 0;
+}
+
+::selection {
+  background: var(--rose);
+  color: var(--plum-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.tracking-kicker {
+  letter-spacing: 0.24em;
+}
+.tracking-title {
+  letter-spacing: 0.08em;
+}
+
+/* Theme switch: soft white pill with an inner rim; sphere knob that is silver
+   on the left in light mode and turns pink, sliding right, in dark mode. */
+.theme-switch {
+  --sw-w: 3.6rem;
+  --sw-h: 2rem;
+  --knob: 1.5rem;
+  --pad: 0.25rem;
+  position: relative;
+  flex-shrink: 0;
+  width: var(--sw-w);
+  height: var(--sw-h);
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #f1e9e5, #fffdfb 55%, #f8f0ec);
+  box-shadow:
+    inset 0 2px 4px rgb(59 37 48 / 0.2),
+    inset 0 -1px 2px rgb(255 255 255 / 0.9),
+    0 0 0 2px rgb(255 255 255 / 0.7),
+    0 1px 3px 2px rgb(59 37 48 / 0.16);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-switch__icon {
+  position: absolute;
+  top: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  translate: 0 -50%;
+  color: #7a3b4a;
+  opacity: 0.55;
+  transition: opacity 0.3s ease;
+}
+.theme-switch__icon--moon {
+  right: 0.5rem;
+}
+.theme-switch__icon--sun {
+  left: 0.5rem;
+  opacity: 0;
+}
+.theme-switch__knob {
+  position: absolute;
+  top: calc((var(--sw-h) - var(--knob)) / 2);
+  left: var(--pad);
+  width: var(--knob);
+  height: var(--knob);
+  border-radius: 9999px;
+  background: radial-gradient(circle at 32% 28%, #ffffff 0%, #dcd8d4 38%, #a09a96 78%, #7f7975 100%);
+  box-shadow:
+    0 3px 6px rgb(59 37 48 / 0.35),
+    inset 0 -2px 3px rgb(0 0 0 / 0.15);
+  transition:
+    left 0.55s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.35s ease,
+    scale 0.15s ease;
+}
+/* Touch ripple on press. */
+.theme-switch__knob::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  border-radius: 9999px;
+  border: 2px solid rgb(255 157 157 / 0.55);
+  opacity: 0;
+  scale: 0.5;
+  transition: opacity 0.4s ease, scale 0.4s ease;
+}
+.theme-switch:active .theme-switch__knob {
+  scale: 0.9;
+}
+.theme-switch:active .theme-switch__knob::after {
+  opacity: 1;
+  scale: 1;
+  transition-duration: 0.15s;
+}
+.dark .theme-switch {
+  background: linear-gradient(180deg, #e8dfdb, #f8f2ef 55%, #ede4e0);
+}
+.dark .theme-switch__knob {
+  left: calc(var(--sw-w) - var(--knob) - var(--pad));
+  background: radial-gradient(circle at 32% 28%, #fff0ee 0%, #ffb3b3 30%, #ff9d9d 58%, #d9667a 100%);
+  box-shadow:
+    0 3px 8px rgb(217 102 122 / 0.5),
+    inset 0 -2px 3px rgb(122 59 74 / 0.25);
+}
+.dark .theme-switch__icon--moon {
+  opacity: 0;
+}
+.dark .theme-switch__icon--sun {
+  opacity: 0.55;
+}
+
+/* Animated icons (see AnimatedIcons.tsx). Loop with long pauses. */
+.ai-pin,
+.ai-tassel,
+.ai-stetho,
+.ai-phone,
+.ai-alert-level {
+  transform-box: fill-box;
+}
+.ai-pin {
+  transform-origin: center;
+  animation: ai-pin 4s ease-in-out infinite;
+}
+@keyframes ai-pin {
+  0%, 55%, 100% { transform: scaleX(1); }
+  65% { transform: scaleX(0.08); }
+  75% { transform: scaleX(1); }
+  85% { transform: scaleX(0.08); }
+  95% { transform: scaleX(1); }
+}
+.ai-tassel {
+  transform-origin: top;
+  animation: ai-tassel 3s ease-in-out infinite;
+}
+@keyframes ai-tassel {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  70% { transform: rotate(18deg); }
+  80% { transform: rotate(-12deg); }
+  90% { transform: rotate(6deg); }
+}
+.ai-stetho {
+  transform-origin: 10px 13.5px;
+  transform-box: view-box;
+  animation: ai-stetho 3.5s ease-in-out infinite;
+}
+@keyframes ai-stetho {
+  0%, 55%, 100% { transform: rotate(0deg); }
+  68% { transform: rotate(-9deg); }
+  82% { transform: rotate(5deg); }
+}
+.ai-phone {
+  transform-origin: center;
+  animation: ai-phone 2.4s ease-in-out infinite;
+}
+@keyframes ai-phone {
+  0%, 40%, 100% { transform: rotate(0deg); }
+  45% { transform: rotate(-14deg); }
+  52% { transform: rotate(12deg); }
+  59% { transform: rotate(-10deg); }
+  66% { transform: rotate(6deg); }
+  72% { transform: rotate(0deg); }
+}
+.ai-wave {
+  animation: ai-wave 2.4s ease-in-out infinite;
+}
+.ai-wave-2 {
+  animation-delay: 0.15s;
+}
+@keyframes ai-wave {
+  0%, 40%, 100% { opacity: 1; }
+  48%, 64% { opacity: 0.15; }
+  56%, 72% { opacity: 1; }
+}
+.ai-alert-level {
+  transform-box: view-box;
+  animation: ai-alert 4s ease-in-out infinite;
+}
+@keyframes ai-alert {
+  0%, 45%, 100% { transform: translateY(100%); }
+  65%, 80% { transform: translateY(0%); }
+}
+
+/* Soft pulse behind the floating WhatsApp / Instagram buttons. */
+.float-pulse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  z-index: -1;
+  animation: float-pulse 2.8s ease-out infinite;
+}
+@keyframes float-pulse {
+  0% { opacity: 0.5; transform: scale(1); }
+  70%, 100% { opacity: 0; transform: scale(1.5); }
+}
+
+dialog::backdrop {
+  background: rgb(35 22 28 / 0.6);
+  backdrop-filter: blur(4px);
+}
+
+dialog[open] {
+  animation: dialog-in 0.25s ease-out;
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
